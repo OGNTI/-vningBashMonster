@@ -1,8 +1,8 @@
 ﻿public class Hemlös
 {
-    public float maxHp = 60;
+    public float maxHp = 50;
     public float hp;
-    public float damage = 25;
+    public float damage = 20;
 
     public Hemlös()
     {
@@ -12,5 +12,12 @@
     public void ResetHp()
     {
         hp = maxHp;
+    }
+
+    public int BrokenBottle(string name, string enemyName)
+    {
+        int bottleDMG = 35;
+        Console.WriteLine($"{name} breaks a bottle and stabs {enemyName}");
+        return bottleDMG;
     }
 }
