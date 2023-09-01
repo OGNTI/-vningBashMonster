@@ -1,5 +1,6 @@
 public class Gubbe
 {
+    public string name;
     public float maxHp = 100;
     public float hp;
     public float damage = 10;

@@ -1,5 +1,6 @@
 ﻿public class Hemlös
 {
+    public string name;
     public float maxHp = 50;
     public float hp;
     public float damage = 20;
