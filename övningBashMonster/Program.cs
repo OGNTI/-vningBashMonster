@@ -2,9 +2,9 @@
 Hemlös hemlös = new();
 
 Console.WriteLine("Who are you?");
-gubbeson.name = Console.ReadLine();
+gubbeson.name = Console.ReadLine().Trim();
 Console.WriteLine("Who is your enemy?");
-hemlös.name = Console.ReadLine();
+hemlös.name = Console.ReadLine().Trim();
 
 Console.WriteLine(
     $"{gubbeson.name} ska till Ica för att köpa sin vanliga dos av black tar heroin men när han försöker att \nkliva in till Ica så snubblar han över en hemlös person, {hemlös.name} blir arg för att han blev \nkrossad av {gubbeson.name}s enorma figur och förlorade {100 - hemlös.hp} hp.\n \n{gubbeson.name} vs {hemlös.name} \nMap: Ica entré \n{gubbeson.name}(Player) has {gubbeson.maxHp} hp and {hemlös.name} has {hemlös.hp} \n \nPlease type Attack or Defend"
@@ -13,7 +13,7 @@ Console.WriteLine(
 bool alive = true;
 while (alive == true)
 {
-    Fight(gubbeson, hemlös, alive);
+    alive = Fight(gubbeson, hemlös, alive);
 }
 
 Console.ReadLine();
@@ -21,7 +21,7 @@ Console.ReadLine();
 static bool Fight(Gubbe gubbeson, Hemlös hemlös, bool alive)
 {
     Random generator = new Random();
-    string action = Console.ReadLine().ToLower();
+    string action = Console.ReadLine().ToLower().Trim();
     Console.WriteLine();
     int enemyAction = generator.Next(1, 3);
 
@@ -30,7 +30,7 @@ static bool Fight(Gubbe gubbeson, Hemlös hemlös, bool alive)
     {
         if (enemyAction == 2)
         {
-            Console.WriteLine($"{hemlös.name} blocked {gubbeson.name} attack");
+            Console.WriteLine($"{hemlös.name} blocked {gubbeson.name}s attack");
         }
         else
         {
@@ -55,7 +55,7 @@ static bool Fight(Gubbe gubbeson, Hemlös hemlös, bool alive)
     {
         if (action == "defend")
         {
-            Console.WriteLine($"{gubbeson.name} blocked {hemlös.name} attack");
+            Console.WriteLine($"{gubbeson.name} blocked {hemlös.name}s attack");
         }
         else
         {
