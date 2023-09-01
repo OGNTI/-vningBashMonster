@@ -1,8 +1,10 @@
 ﻿Gubbe gubbeson = new();
 Hemlös hemlös = new();
 
-gubbeson.name = "Gubbeson";
-hemlös.name = "hemlös";
+Console.WriteLine("Who are you?");
+gubbeson.name = Console.ReadLine();
+Console.WriteLine("Who is your enemy?");
+hemlös.name = Console.ReadLine();
 
 Console.WriteLine(
     $"{gubbeson.name} ska till Ica för att köpa sin vanliga dos av black tar heroin men när han försöker att \nkliva in till Ica så snubblar han över en hemlös person, {hemlös.name} blir arg för att han blev \nkrossad av {gubbeson.name}s enorma figur och förlorade {100 - hemlös.hp} hp.\n \n{gubbeson.name} vs {hemlös.name} \nMap: Ica entré \n{gubbeson.name}(Player) has {gubbeson.maxHp} hp and {hemlös.name} has {hemlös.hp} \n \nPlease type Attack or Defend"
